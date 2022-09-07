@@ -175,7 +175,7 @@ main {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
+  border-radius: 16px;
   margin: 15px 0px;
 }
 </style>
