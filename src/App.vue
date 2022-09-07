@@ -21,7 +21,7 @@
           <div class="temp">{{ Math.round(weather.main.temp)}}°F</div>
           <div class="weather">{{ weather.weather[0].main }} </div>
           <div class="extra"> Feels Like {{ Math.round(weather.main.feels_like)}}°F 
-            &nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;
             Humidity {{weather.main.humidity}}% </div>
         </div>
       </div>
@@ -150,7 +150,7 @@ main {
   display: inline-block;
   padding: 10px 25px;
   color: #fff;
-  font-size: 169px;
+  font-size: 128px;
   font-weight: 2000;
 
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
