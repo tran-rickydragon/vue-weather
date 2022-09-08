@@ -1,6 +1,7 @@
 <template>
   <div id="app" :class="typeof weather.main != 'undefined' && weather.main.temp > 50 ? 'warm' : ''">
     <main>
+      <div class="title"> Vue Weather App by Ricky Tran</div>
       <div class="search-box">
         <input 
         type="text" 
@@ -83,7 +84,7 @@ body {
   background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4s;
+  transition: 0.69s;
 }
 
 #app.warm {
@@ -95,6 +96,15 @@ main {
   padding: 25px;
 
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.5));
+}
+
+.title {
+  color: rgba(56, 56, 56, 0.85);
+  font-size: 24px;
+  font-weight: 900;
+  text-align: left;
+  text-shadow: 1px 1px rgba(255, 255, 255, 0.15);
+  margin: 16px;
 }
 
 .search-box {
@@ -136,7 +146,7 @@ main {
 .location-box .date {
   color: #fff;
   font-size: 30px;
-  font-weight: 200;
+  font-weight: 300;
   font-style: italic;
   text-align: center;
   text-shadow: 1px 3px rgba(0, 0, 0, 0.25);
