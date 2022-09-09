@@ -6,7 +6,7 @@
         <input 
         type="text" 
         class="search-bar" 
-        placeholder="Search..."
+        placeholder="Search Location..."
         v-model="query"
         @keypress="fetchWeather"
         >
@@ -20,6 +20,7 @@
 
         <div class="weather-box">
           <div class="temp">{{ Math.round(weather.main.temp)}}°F</div>
+          <div class="image"><img id="wicon" alt="Weather Icon" v-bind:src="`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`"></div>
           <div class="weather">{{ weather.weather[0].main }} </div>
           <div class="extra"> Feels Like {{ Math.round(weather.main.feels_like)}}°F 
             &nbsp;&nbsp;&nbsp;
@@ -63,7 +64,7 @@ export default {
       let month = months[d.getMonth()];
       let year = d.getFullYear();
 
-      return `${day} ${date} ${month} ${year}`;
+      return `${day} ${month} ${date} ${year}`;
     }
   }
 }
@@ -166,7 +167,7 @@ main {
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   background-color: rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  margin: 30px 0px;
+  margin: 24px 0px;
 
   box-shadow: 3px 6px rgba(0, 0, 0, 0.25);
 }
@@ -186,6 +187,6 @@ main {
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
-  margin: 15px 0px;
+  margin: 16px 0px;
 }
 </style>
